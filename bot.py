@@ -13,8 +13,8 @@ import logging
 import subprocess
 import requests
 import os
-token = "199356209:AAHMUXxTeFXnsqwWjZxJD2Zc" #token
-sudo = 122774063 #admin
+token = "120358380:AAFnYvCm_qWnsasM0fKjKVgjLmOXR6vCOAI" #token
+sudo = 185449679 #admin
 bot = telebot.TeleBot(token)
 db = "https://api.telegram.org/bot{}/getMe?".format(token)
 res = urllib.request.urlopen(db)
@@ -70,7 +70,7 @@ def sads(m):
     try:
         if m.chat.id == logchat :
             R.set("ads:{}".format(botuser),True)
-            bot.send_message(m.chat.id,"تبلیغات آی تیم در ربات شما فعال شد\nممنون که مارو حمایت میکنید")
+            bot.send_message(m.chat.id,"ممنون که مارو حمایت میکنید")
     except Exception as e:
         print(e)
 @bot.message_handler(commands=['disableads'])
@@ -101,11 +101,11 @@ def remlog(m):
 def start(m):
     try :
         if m.chat.id == logchat :
-            text = 'سلام رئیس 👋\nدستورات از این قراره:\n\n/setstart <text>\nتنظیم متن شروع با قابلیت مارکداون\n/setwait <text>\nتنظیم متن ارسالی به کاربر بعد از پیام های وی با قابلیت مارکدون\n/ban <on reply/id>\nبن کردن یک نفر از پیام رسان\n/unban <on reply/id>\nآن بن کردن یک نفر از پیام رسان\n/users\nتعداد کاربران\n/bans\nتعداد افراد بن شده\n/showstart\nنمایش متن استارت فعلی\n/showwait\nدریافت متن انتظار فعلی\n/setlog <in group or private>\nتنظیم یک گروه به عنوان گروه ادمین\n/dellog\nحذف گروه ادمین\n/sendtoall <text>\nارسال یک متن به تمامی کاربران\n/fwdtoall <on reply>\nفوروارد یک پیام به تمامی اعضا\n/setflood <num>\nتنظیم تعداد پیام های ارسالی برای تشخیص اسپم (پیشفرض : ۵ در ۴ ثانیه)\n/setfloodtime <num>\nتنظیم زمان محدودیت ارسال پیام(پیشفرض : ۴)\n/msg <id> <text>\nفرستادن یک پیام به یک شخص از طریق آیدی\n/enableads\nحمایت از ما با تبلیغ سورس ربات :)\n/disableads\nقطع حمایت از ما :(\n\nنکته :‌برای جواب دادن به اشخاص روی پیام آنها ریپلای کنید\nنکته : پیشنهاد میشه تنظیمات فلود رو دستکاری نکنید \n\nبا آروزی خوشحالی برای شما\nمنتظر سورپرایز ها در ورژن بعدی باشید\n[iTeam](https://telegram.me/iTeam_ir)'
+            text = 'سلام رئیس 👋\nدستورات از این قراره:\n\n/setstart <text>\nتنظیم متن شروع با قابلیت مارکداون\n/setwait <text>\nتنظیم متن ارسالی به کاربر بعد از پیام های وی با قابلیت مارکدون\n/ban <on reply/id>\nبن کردن یک نفر از پیام رسان\n/unban <on reply/id>\nآن بن کردن یک نفر از پیام رسان\n/users\nتعداد کاربران\n/bans\nتعداد افراد بن شده\n/showstart\nنمایش متن استارت فعلی\n/showwait\nدریافت متن انتظار فعلی\n/setlog <in group or private>\nتنظیم یک گروه به عنوان گروه ادمین\n/dellog\nحذف گروه ادمین\n/sendtoall <text>\nارسال یک متن به تمامی کاربران\n/fwdtoall <on reply>\nفوروارد یک پیام به تمامی اعضا\n/setflood <num>\nتنظیم تعداد پیام های ارسالی برای تشخیص اسپم (پیشفرض : ۵ در ۴ ثانیه)\n/setfloodtime <num>\nتنظیم زمان محدودیت ارسال پیام(پیشفرض : ۴)\n/msg <id> <text>\nفرستادن یک پیام به یک شخص از طریق آیدی\n/enableads\nحمایت از ما با تبلیغ سورس ربات :)\n/disableads\nقطع حمایت از ما :(\n\nنکته :‌برای جواب دادن به اشخاص روی پیام آنها ریپلای کنید\nنکته : پیشنهاد میشه تنظیمات فلود رو دستکاری نکنید            \n\nبا آروزی خوشحالی برای شما)'
             bot.send_message(logchat,text,parse_mode='Markdown')
         elif not m.chat.id == logchat :
             markup =  types.InlineKeyboardMarkup()
-            markup.add(types.InlineKeyboardButton('ربات خود را بسازید!', url='https://telegram.me/iTeam_ir/39'))
+            markup.add(types.InlineKeyboardButton('ربات خود را بسازید!', url='https://telegram.me/IRexe)
             if R.get("welcome:{}".format(str(botid))) :
                 tex3 = R.get("welcome:{}".format(str(botid)))
             else :
